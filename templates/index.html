@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flask URL shortner</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+
+        input {
+            width: 60%;
+            padding: 8px;
+            margin: 10px 0;
+        }
+
+        button {
+            padding: 8px 15px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>URL shortner</h2>
+    <form method="post">
+        <input type="text" name="url" placeholder="Enter your URL" required>
+    </form>
+
+    {% if short_url %}
+    <p>Shortend URL : <a href="{{ short_url }}" target="_blank">{{ short_url }}</a></p>
+    {% endif %}
+
+</body>
+
+</html>
